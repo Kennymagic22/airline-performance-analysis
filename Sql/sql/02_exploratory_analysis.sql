@@ -8,9 +8,11 @@
 SELECT COUNT(*) AS Total_Flights
 FROM Cleaned_Flights;
 
+
 -- Total Unique Passengers
 SELECT COUNT(DISTINCT `Passenger ID`) AS Total_Passengers
 FROM Cleaned_Flights;
+
 
 -- Flight Status Distribution
 SELECT `Flight Status`,
@@ -21,6 +23,7 @@ FROM Cleaned_Flights
 GROUP BY `Flight Status`
 ORDER BY Flight_Count DESC;
 
+
 -- Gender Distribution
 SELECT `Gender`,
        COUNT(*) AS Total,
@@ -29,6 +32,7 @@ SELECT `Gender`,
 FROM Cleaned_Flights
 GROUP BY `Gender`
 ORDER BY Total DESC;
+
 
 -- Average Passenger Age
 SELECT ROUND(AVG(`Age`), 2) AS Average_Age
