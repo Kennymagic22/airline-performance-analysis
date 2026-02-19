@@ -14,6 +14,7 @@ FROM Cleaned_Flights
 GROUP BY Year, Month
 ORDER BY Year, Month;
 
+
 -- Monthly Delay Trend
 SELECT 
     YEAR(Departure_Date_Clean) AS Year,
@@ -23,6 +24,7 @@ FROM Cleaned_Flights
 GROUP BY Year, Month
 ORDER BY Year, Month;
 
+
 -- Most Popular Routes
 SELECT `Airport Name` AS Departure_Airport,
        `Arrival Airport`,
@@ -30,6 +32,7 @@ SELECT `Airport Name` AS Departure_Airport,
 FROM Cleaned_Flights
 GROUP BY `Airport Name`, `Arrival Airport`
 ORDER BY Route_Frequency DESC;
+
 
 -- Pilot Performance Ranking (Lowest Delay First)
 SELECT `Pilot Name`,
